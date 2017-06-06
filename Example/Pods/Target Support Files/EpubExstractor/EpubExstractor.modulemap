@@ -1,0 +1,6 @@
+framework module EpubExstractor {
+  umbrella header "EpubExstractor-umbrella.h"
+
+  export *
+  module * { export * }
+}

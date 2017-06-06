@@ -15,6 +15,10 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		78D968E865A565032FBE76B0 /* Pods_EpubExstractor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A851A6AA70DA62FFECD19644 /* Pods_EpubExstractor_Tests.framework */; };
+		9D343C001EA5774C00AB5A5D /* accessible_epub_3.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D343BFF1EA5774C00AB5A5D /* accessible_epub_3.epub */; };
+		9D343C021EA57AA000AB5A5D /* moby-dick.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D343C011EA57A8000AB5A5D /* moby-dick.epub */; };
+		9D3493FD1E5890180076D417 /* Metamorphosis-jackson.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D3493FC1E5890180076D417 /* Metamorphosis-jackson.epub */; };
+		9D5F9B1F1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D5F9B1E1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +34,8 @@
 /* Begin PBXFileReference section */
 		0D8CF5B487593A21678D8528 /* Pods-EpubExstractor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExstractor_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExstractor_Tests/Pods-EpubExstractor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		176000F36348F0BA6A05D822 /* Pods-EpubExstractor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExstractor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExstractor_Tests/Pods-EpubExstractor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D436B1810858EFCC7F51B50 /* EpubExstractor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = EpubExstractor.podspec; path = ../EpubExstractor.podspec; sourceTree = "<group>"; };
-		4E2206374129C1C933146311 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2D436B1810858EFCC7F51B50 /* EpubExstractor.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = EpubExstractor.podspec; path = ../EpubExstractor.podspec; sourceTree = "<group>"; };
+		4E2206374129C1C933146311 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		501DEE453EEAF51A6869A004 /* Pods_EpubExstractor_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EpubExstractor_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDD0069ADD7699A7EAB2541 /* Pods-EpubExstractor_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExstractor_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExstractor_Example/Pods-EpubExstractor_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EpubExstractor_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EpubExstractor_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,9 +48,13 @@
 		607FACE51AFB9204008FA782 /* EpubExstractor_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpubExstractor_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		9D343BFF1EA5774C00AB5A5D /* accessible_epub_3.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = accessible_epub_3.epub; sourceTree = "<group>"; };
+		9D343C011EA57A8000AB5A5D /* moby-dick.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "moby-dick.epub"; sourceTree = "<group>"; };
+		9D3493FC1E5890180076D417 /* Metamorphosis-jackson.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metamorphosis-jackson.epub"; sourceTree = "<group>"; };
+		9D5F9B1E1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A-Room-with-a-View-morrison.epub"; sourceTree = "<group>"; };
 		A057CD28B6D122DF9A57FAB7 /* Pods-EpubExstractor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExstractor_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExstractor_Example/Pods-EpubExstractor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A851A6AA70DA62FFECD19644 /* Pods_EpubExstractor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EpubExstractor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C670CC0AAD865E38498C1BD4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C670CC0AAD865E38498C1BD4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				9D3493FB1E5890000076D417 /* Resources */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for EpubExstractor";
@@ -157,6 +166,17 @@
 				C670CC0AAD865E38498C1BD4 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		9D3493FB1E5890000076D417 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9D3493FC1E5890180076D417 /* Metamorphosis-jackson.epub */,
+				9D5F9B1E1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub */,
+				9D343BFF1EA5774C00AB5A5D /* accessible_epub_3.epub */,
+				9D343C011EA57A8000AB5A5D /* moby-dick.epub */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,14 +230,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -247,8 +269,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				9D3493FD1E5890180076D417 /* Metamorphosis-jackson.epub in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				9D5F9B1F1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				9D343C021EA57AA000AB5A5D /* moby-dick.epub in Resources */,
+				9D343C001EA5774C00AB5A5D /* accessible_epub_3.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,8 +441,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -460,8 +488,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -480,6 +510,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -494,6 +525,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -507,6 +539,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -526,6 +559,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -541,6 +575,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
