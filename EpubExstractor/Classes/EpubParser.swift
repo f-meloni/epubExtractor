@@ -31,7 +31,7 @@ class EpubParser {
         let coverPath = self.ePubCoverURL(rootDocument: rootDocument, epubDirectoryURL: epubDirectoryURL)
         let manifest = self.manifest(rootDocument: rootDocument)
         let guide = self.guide(rootDocument: rootDocument)
-        let spine = self.spine(rootDocument: rootDocument)
+        let spine = self.spine(rootDocument: rootDocument, manifest: manifest)
         
         let epubContentParser: EPubContentParser = epubType == .epub2 ? Epub2ContentParser(manifest: manifest, epubContentsURL: contentsURL) : Epub3ContentParser(manifest: manifest, epubContentsURL: contentsURL)
         
@@ -136,13 +136,13 @@ class EpubParser {
         return result
     }
     
-    private func spine(rootDocument: AEXMLDocument) -> [SpineItem] {
+    private func spine(rootDocument: AEXMLDocument, manifest: [String: ManifestItem]) -> [SpineItem] {
         let spineElement = rootDocument.root["spine"]
         
         var result: [SpineItem] = []
         
         for element in spineElement.children {
-            if let spineItem = SpineItem(xmlElement: element) {
+            if let spineItem = SpineItem(xmlElement: element, manifest: manifest) {
                result.append(spineItem)
             }
         }
