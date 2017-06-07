@@ -9,21 +9,27 @@
 import Foundation
 import AEXML
 
+enum EpubParseError: Error {
+    case rootFileNotFound
+    case rootFileNotValid
+    case unknownEpubType
+}
+
 class EpubParser {
-    func parseEpub(epubDirectoryURL: URL) -> Epub? {
+    func parseEpub(epubDirectoryURL: URL) throws -> Epub {
         guard let rootFileURL = self.rootFile(epubDirectoryURL: epubDirectoryURL) else {
-            return nil
+            throw EpubParseError.rootFileNotFound
         }
         
         guard let data = try? Data(contentsOf: rootFileURL),
             let rootDocument = try? AEXMLDocument(xml: data) else {
-                return nil
+                throw EpubParseError.rootFileNotValid
         }
         
         let epubType = self.epubType(rootDocument: rootDocument)
         
         guard epubType != .unknown else {
-            return nil
+            throw EpubParseError.unknownEpubType
         }
         
         let contentsURL = rootFileURL.deletingLastPathComponent()
