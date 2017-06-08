@@ -34,12 +34,12 @@ class EpubParser {
         
         let contentsURL = rootFileURL.deletingLastPathComponent()
         let metadata = self.epubMetaData(rootDocument: rootDocument)
-        let coverURL = self.ePubCoverURL(rootDocument: rootDocument, epubDirectoryURL: epubDirectoryURL)
         let manifest = self.manifest(rootDocument: rootDocument)
+        let coverURL = self.ePubCoverURL(rootDocument: rootDocument, manifest: manifest, contentDirectoryURL: contentsURL)
         let guide = self.guide(rootDocument: rootDocument)
         let spine = self.spine(rootDocument: rootDocument, manifest: manifest)
         
-        let epubContentParser: EPubContentParser = epubType == .epub2 ? Epub2ContentParser(manifest: manifest, epubContentsURL: contentsURL) : Epub3ContentParser(manifest: manifest, epubContentsURL: contentsURL)
+        let epubContentParser: EPubContentParser = (epubType == .epub2) ? Epub2ContentParser(manifest: manifest, epubContentsURL: contentsURL) : Epub3ContentParser(manifest: manifest, epubContentsURL: contentsURL)
         
         return Epub(contentsURL: epubDirectoryURL, rootFileURL: rootFileURL, type: epubType, coverURL: coverURL)
     }
@@ -88,13 +88,9 @@ class EpubParser {
         }
     }
     
-    private func ePubCoverURL(rootDocument: AEXMLDocument, epubDirectoryURL: URL) -> URL? {
-        let coverElements = rootDocument.root.all(withAttributes: ["id": "cover-image"])
-        
-        if let coverElement = coverElements?.first {
-            if let href = coverElement.attributes["href"] {
-                return epubDirectoryURL.appendingPathComponent(href)
-            }
+    private func ePubCoverURL(rootDocument: AEXMLDocument, manifest: [String:ManifestItem], contentDirectoryURL: URL) -> URL? {
+        if let coverHref = manifest["cover-image"]?.href {
+            return URL(fileURLWithPath: contentDirectoryURL.appendingPathComponent(coverHref).path)
         }
         
         let metaDocument = rootDocument.root["metadata"]
@@ -108,7 +104,7 @@ class EpubParser {
         if let coverId = coverId,
             let coverItem = rootDocument.root["manifest"]["item"].all(withAttributes: ["id": coverId])?.first,
             let coverHref = coverItem.attributes["href"] {
-            return URL(fileURLWithPath: epubDirectoryURL.appendingPathComponent(coverHref).path)
+            return URL(fileURLWithPath: contentDirectoryURL.appendingPathComponent(coverHref).path)
         }
         
         return nil
