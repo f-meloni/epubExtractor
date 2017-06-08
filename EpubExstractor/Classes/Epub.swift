@@ -18,4 +18,5 @@ public struct Epub {
     public var contentsURL: URL
     public var rootFileURL: URL
     public var type: EpubType
+    public var coverURL: URL?
 }
