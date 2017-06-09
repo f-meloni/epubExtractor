@@ -1,8 +1,8 @@
-# EpubExstractor
+# EpubExtractor
 ![Swift 3.0](https://img.shields.io/badge/Swift-3.0-red.svg)
-[![Version](https://img.shields.io/cocoapods/v/EpubExstractor.svg?style=flat)](http://cocoapods.org/pods/EpubExstractor)
-[![License](https://img.shields.io/cocoapods/l/EpubExstractor.svg?style=flat)](http://cocoapods.org/pods/EpubExstractor)
-[![Platform](https://img.shields.io/cocoapods/p/EpubExstractor.svg?style=flat)](http://cocoapods.org/pods/EpubExstractor)
+[![Version](https://img.shields.io/cocoapods/v/EpubExtractor.svg?style=flat)](http://cocoapods.org/pods/EpubExtractor)
+[![License](https://img.shields.io/cocoapods/l/EpubExtractor.svg?style=flat)](http://cocoapods.org/pods/EpubExtractor)
+[![Platform](https://img.shields.io/cocoapods/p/EpubExtractor.svg?style=flat)](http://cocoapods.org/pods/EpubExtractor)
 
 ## Example
 
@@ -15,11 +15,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-EpubExstractor is available through [CocoaPods](http://cocoapods.org). To install
+EpubExtractor is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "EpubExstractor"
+pod "EpubExtractor"
 ```
 
 ## Usage
@@ -44,4 +44,4 @@ f-meloni, franco.meloni91@gmail.com
 
 ## License
 
-EpubExstractor is available under the MIT license. See the LICENSE file for more info.
+EpubExtractor is available under the MIT license. See the LICENSE file for more info.

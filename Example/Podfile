@@ -1,9 +1,9 @@
 use_frameworks!
 
-target 'EpubExstractor_Example' do
-  pod 'EpubExstractor', :path => '../'
+target 'EpubExtractor_Example' do
+  pod 'EpubExtractor', :path => '../'
 
-  target 'EpubExstractor_Tests' do
+  target 'EpubExtractor_Tests' do
     inherit! :search_paths
 
     pod 'Quick', '~> 1.1.0'

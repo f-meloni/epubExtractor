@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import EpubExstractor
+import EpubExtractor
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {

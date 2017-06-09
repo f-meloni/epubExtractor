@@ -1,28 +1,28 @@
 PODS:
   - AEXML (4.0.2)
-  - EpubExstractor (0.1.0):
+  - EpubExtractor (0.1.0):
     - AEXML (~> 4.0.2)
     - SSZipArchive (~> 1.7)
   - Nimble (5.1.1)
   - Quick (1.1.0)
-  - SSZipArchive (1.7)
+  - SSZipArchive (1.8.1)
 
 DEPENDENCIES:
-  - EpubExstractor (from `../`)
+  - EpubExtractor (from `../`)
   - Nimble (~> 5.1.1)
   - Quick (~> 1.1.0)
 
 EXTERNAL SOURCES:
-  EpubExstractor:
-    :path: ../
+  EpubExtractor:
+    :path: "../"
 
 SPEC CHECKSUMS:
   AEXML: 7de81f28c6c876a210f31924acc2e326cd01e162
-  EpubExstractor: 5dc8dbe394997f47a12d5d829ab1e6596ff90e77
+  EpubExtractor: abfde3b5d103afaa77ddb7798cb6ab90a3a92f8e
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  SSZipArchive: 63f8e11cfcc33e03e4cd666b4359ea8bd6facd0c
+  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
 
-PODFILE CHECKSUM: de658a626df4d77eb65c060c7c49a0ba212a2444
+PODFILE CHECKSUM: 7a1e2f40d0bf0c9b441790f42142f0834c7e13c3
 
 COCOAPODS: 1.2.0
