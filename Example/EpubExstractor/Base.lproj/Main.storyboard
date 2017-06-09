@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GON-FX-LIW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GON-FX-LIW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-J5-IOe">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="8U2-Nz-Rvk"/>
@@ -32,17 +32,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yhC-J5-IOe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="MnX-S0-eGC"/>
                             <constraint firstItem="yhC-J5-IOe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="bUS-pm-xYQ"/>
                             <constraint firstAttribute="trailing" secondItem="yhC-J5-IOe" secondAttribute="trailing" id="qWn-bK-nJ2"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yhC-J5-IOe" secondAttribute="bottom" id="sle-zG-q1E"/>
+                            <constraint firstItem="yhC-J5-IOe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="x6H-jq-K6B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Uh-zm-w4L"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="639" y="109"/>
+            <point key="canvasLocation" x="637.60000000000002" y="108.39580209895054"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YJk-f2-MMm">
@@ -72,8 +72,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMm-k9-Sy9">
-                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMm-k9-Sy9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="69t-mv-sWt" id="lZa-xh-BQd"/>
@@ -83,10 +83,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HMm-k9-Sy9" firstAttribute="leading" secondItem="KX7-PG-alz" secondAttribute="leading" constant="16" id="3tL-LL-1OR"/>
+                            <constraint firstItem="HMm-k9-Sy9" firstAttribute="leading" secondItem="KX7-PG-alz" secondAttribute="leading" id="3tL-LL-1OR"/>
                             <constraint firstItem="HMm-k9-Sy9" firstAttribute="top" secondItem="sLn-RH-tJ0" secondAttribute="bottom" id="D33-nB-Ouh"/>
                             <constraint firstItem="FLn-ER-Ry2" firstAttribute="top" secondItem="HMm-k9-Sy9" secondAttribute="bottom" id="GE2-h0-x3d"/>
-                            <constraint firstAttribute="trailing" secondItem="HMm-k9-Sy9" secondAttribute="trailing" constant="16" id="ZAY-vm-oBj"/>
+                            <constraint firstAttribute="trailing" secondItem="HMm-k9-Sy9" secondAttribute="trailing" id="ZAY-vm-oBj"/>
                         </constraints>
                     </view>
                     <connections>
