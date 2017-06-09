@@ -22,11 +22,13 @@ public enum EpubType {
 
 public struct Epub {
     public let contentsURL: URL
-    public let rootFileURL: URL
     public let type: EpubType
     public let coverURL: URL?
     public let metadata: [String:String]
     public let manifest: [String:ManifestItem]
+    public let guide: [GuideItem]
+    public let spine: [SpineItem]
+    let epubContentParser: EPubContentParser
     
     public var title: String? {
         get {
@@ -56,5 +58,9 @@ public struct Epub {
         get {
             return self.metadata[publisherKey]
         }
+    }
+    
+    public var chapters: [ChapterItem] {
+        return self.epubContentParser.chapters
     }
 }

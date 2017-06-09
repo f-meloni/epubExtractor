@@ -10,5 +10,5 @@ import UIKit
 
 protocol EPubContentParser {
     var contentURL: URL { get }
-    func chapters(epubContentsURL: URL) -> [ChapterItem]
+    var chapters: [ChapterItem] { get }
 }

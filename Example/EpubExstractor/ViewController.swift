@@ -11,7 +11,7 @@ import Foundation
 import EpubExstractor
 
 class ViewController: UIViewController {
-    let epubs = [("epub 2", ["Metamorphosis-jackson", "A-Room-with-a-View-morrison"]), ("epub3", ["moby-dick", "accessible_epub_3"])]
+    let epubs = [("epub 2", ["Metamorphosis-jackson", "A-Room-with-a-View-morrison", "Beyond-Good-and-Evil-Galbraithcolor"]), ("epub3", ["moby-dick", "accessible_epub_3", "cole-voyage-of-life", "spanish-tales-epub3", "igp-epub-unleashed-01-2012", "kje-bible-books"])]
     
     override func viewDidLoad() {
         super.viewDidLoad()

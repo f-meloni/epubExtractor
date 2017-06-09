@@ -15,6 +15,11 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		78D968E865A565032FBE76B0 /* Pods_EpubExstractor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A851A6AA70DA62FFECD19644 /* Pods_EpubExstractor_Tests.framework */; };
+		9D06DC111EEB3B9900061E7F /* cole-voyage-of-life.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D06DC0A1EEB3B9900061E7F /* cole-voyage-of-life.epub */; };
+		9D06DC121EEB3B9900061E7F /* spanish-tales-epub3.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D06DC0B1EEB3B9900061E7F /* spanish-tales-epub3.epub */; };
+		9D06DC141EEB3B9900061E7F /* Beyond-Good-and-Evil-Galbraithcolor.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D06DC0D1EEB3B9900061E7F /* Beyond-Good-and-Evil-Galbraithcolor.epub */; };
+		9D06DC151EEB3B9900061E7F /* igp-epub-unleashed-01-2012.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D06DC0E1EEB3B9900061E7F /* igp-epub-unleashed-01-2012.epub */; };
+		9D06DC161EEB3B9900061E7F /* kje-bible-books.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D06DC0F1EEB3B9900061E7F /* kje-bible-books.epub */; };
 		9D1C5D4E1EE8AB6600856DF1 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C5D4C1EE8AB6600856DF1 /* ImageCell.swift */; };
 		9D1C5D511EE8AC6500856DF1 /* CellUtitlities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1C5D501EE8AC6500856DF1 /* CellUtitlities.swift */; };
 		9D343C001EA5774C00AB5A5D /* accessible_epub_3.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D343BFF1EA5774C00AB5A5D /* accessible_epub_3.epub */; };
@@ -51,6 +56,11 @@
 		607FACE51AFB9204008FA782 /* EpubExstractor_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EpubExstractor_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		9D06DC0A1EEB3B9900061E7F /* cole-voyage-of-life.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "cole-voyage-of-life.epub"; path = "../../../../Downloads/cole-voyage-of-life.epub"; sourceTree = "<group>"; };
+		9D06DC0B1EEB3B9900061E7F /* spanish-tales-epub3.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "spanish-tales-epub3.epub"; path = "../../../../Downloads/spanish-tales-epub3.epub"; sourceTree = "<group>"; };
+		9D06DC0D1EEB3B9900061E7F /* Beyond-Good-and-Evil-Galbraithcolor.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Beyond-Good-and-Evil-Galbraithcolor.epub"; path = "../../../../Downloads/Beyond-Good-and-Evil-Galbraithcolor.epub"; sourceTree = "<group>"; };
+		9D06DC0E1EEB3B9900061E7F /* igp-epub-unleashed-01-2012.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "igp-epub-unleashed-01-2012.epub"; path = "../../../../Downloads/igp-epub-unleashed-01-2012.epub"; sourceTree = "<group>"; };
+		9D06DC0F1EEB3B9900061E7F /* kje-bible-books.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "kje-bible-books.epub"; path = "../../../../Downloads/kje-bible-books.epub"; sourceTree = "<group>"; };
 		9D1C5D4C1EE8AB6600856DF1 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		9D1C5D501EE8AC6500856DF1 /* CellUtitlities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellUtitlities.swift; sourceTree = "<group>"; };
 		9D343BFF1EA5774C00AB5A5D /* accessible_epub_3.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = accessible_epub_3.epub; sourceTree = "<group>"; };
@@ -192,6 +202,11 @@
 				9D5F9B1E1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub */,
 				9D343BFF1EA5774C00AB5A5D /* accessible_epub_3.epub */,
 				9D343C011EA57A8000AB5A5D /* moby-dick.epub */,
+				9D06DC0A1EEB3B9900061E7F /* cole-voyage-of-life.epub */,
+				9D06DC0B1EEB3B9900061E7F /* spanish-tales-epub3.epub */,
+				9D06DC0F1EEB3B9900061E7F /* kje-bible-books.epub */,
+				9D06DC0E1EEB3B9900061E7F /* igp-epub-unleashed-01-2012.epub */,
+				9D06DC0D1EEB3B9900061E7F /* Beyond-Good-and-Evil-Galbraithcolor.epub */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -287,10 +302,15 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				9D3493FD1E5890180076D417 /* Metamorphosis-jackson.epub in Resources */,
+				9D06DC161EEB3B9900061E7F /* kje-bible-books.epub in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				9D5F9B1F1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub in Resources */,
+				9D06DC111EEB3B9900061E7F /* cole-voyage-of-life.epub in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				9D343C021EA57AA000AB5A5D /* moby-dick.epub in Resources */,
+				9D06DC151EEB3B9900061E7F /* igp-epub-unleashed-01-2012.epub in Resources */,
+				9D06DC121EEB3B9900061E7F /* spanish-tales-epub3.epub in Resources */,
+				9D06DC141EEB3B9900061E7F /* Beyond-Good-and-Evil-Galbraithcolor.epub in Resources */,
 				9D343C001EA5774C00AB5A5D /* accessible_epub_3.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

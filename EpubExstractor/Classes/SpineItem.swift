@@ -9,7 +9,7 @@
 import UIKit
 import AEXML
 
-struct SpineItem {
+public struct SpineItem {
     public let idRef: String
     public let linear: Bool
     public let href: String?
