@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'EpubExtractor'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of EpubExtractor.'
+  s.summary          = 'iOS library to extract epubs'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This library offers a light, efficent and easy to use interface to extract and parse epubs 2 or 3 
                        DESC
 
   s.homepage         = 'https://github.com/f-meloni/EpubExtractor'
