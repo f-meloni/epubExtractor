@@ -6,6 +6,9 @@
 //
 //
 
+/**
+ This object rappresent a chapter from the Epub's table of contents
+ */
 public protocol ChapterItem {
     var src: URL { get }
     var label: String? { get }

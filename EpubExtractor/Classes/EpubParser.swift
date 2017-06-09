@@ -41,7 +41,7 @@ class EpubParser {
         
         let epubContentParser: EPubContentParser = (epubType == .epub2) ? Epub2ContentParser(manifest: manifest, epubContentsURL: contentsURL) : Epub3ContentParser(manifest: manifest, epubContentsURL: contentsURL)
         
-        return Epub(contentsURL: epubDirectoryURL,
+        return Epub(epubDirectoryURL: epubDirectoryURL,
                     type: epubType,
                     coverURL: coverURL,
                     metadata: metadata,
