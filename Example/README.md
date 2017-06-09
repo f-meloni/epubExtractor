@@ -45,4 +45,3 @@ f-meloni, franco.meloni91@gmail.com
 ## License
 
 EpubExstractor is available under the MIT license. See the LICENSE file for more info.
-
