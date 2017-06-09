@@ -27,7 +27,7 @@ pod "EpubExstractor"
 let epubExtractor = EPubExtractor()
 epubExtractor.delegate = self
 let destinationURL = //Destintion URL
-epubExtractor.extractEpub(epubURL: //Epub URL, destinationFolder: destinationURL)
+epubExtractor.extractEpub(epubURL: epubURL, destinationFolder: destinationURL)
 ```
 
 ## EpubExtractorDelegate
