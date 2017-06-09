@@ -9,7 +9,7 @@
 import UIKit
 import AEXML
 
-class Epub3ContentParser: EPubContentParser {
+struct Epub3ContentParser: EPubContentParser {
     let contentURL: URL
     
     init(manifest: [String:ManifestItem], epubContentsURL: URL) {

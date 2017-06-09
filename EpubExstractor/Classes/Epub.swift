@@ -8,6 +8,13 @@
 
 import UIKit
 
+private let dcNamespace = "dc:"
+private let titleKey = dcNamespace + "title"
+private let authorKey = dcNamespace + "creator"
+private let languageKey = dcNamespace + "language"
+private let publisherKey = dcNamespace + "publisher"
+private let identifierKey = dcNamespace + "identifier"
+
 public enum EpubType {
     case unknown
     case epub2
@@ -15,8 +22,40 @@ public enum EpubType {
 }
 
 public struct Epub {
-    public var contentsURL: URL
-    public var rootFileURL: URL
-    public var type: EpubType
-    public var coverURL: URL?
+    public let contentsURL: URL
+    public let rootFileURL: URL
+    public let type: EpubType
+    public let coverURL: URL?
+    public let metadata: [String:String]
+    public let manifest: [String:ManifestItem]
+    
+    public var title: String? {
+        get {
+            return self.metadata[titleKey]
+        }
+    }
+    
+    public var author: String? {
+        get {
+            return self.metadata[authorKey]
+        }
+    }
+    
+    public var language: String? {
+        get {
+            return self.metadata[languageKey]
+        }
+    }
+    
+    public var publisher: String?{
+        get {
+            return self.metadata[publisherKey]
+        }
+    }
+    
+    public var identifier: String?{
+        get {
+            return self.metadata[publisherKey]
+        }
+    }
 }
