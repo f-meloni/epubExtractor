@@ -8,12 +8,11 @@
 
 import UIKit
 
-private let dcNamespace = "dc:"
-private let titleKey = dcNamespace + "title"
-private let authorKey = dcNamespace + "creator"
-private let languageKey = dcNamespace + "language"
-private let publisherKey = dcNamespace + "publisher"
-private let identifierKey = dcNamespace + "identifier"
+private let titleKey = "dc:title"
+private let authorKey = "dc:creator"
+private let languageKey = "dc:language"
+private let publisherKey = "dc:publisher"
+private let identifierKey = "dc:identifier"
 
 public enum EpubType {
     case unknown
