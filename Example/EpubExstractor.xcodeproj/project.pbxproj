@@ -26,6 +26,7 @@
 		9D343C021EA57AA000AB5A5D /* moby-dick.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D343C011EA57A8000AB5A5D /* moby-dick.epub */; };
 		9D3493FD1E5890180076D417 /* Metamorphosis-jackson.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D3493FC1E5890180076D417 /* Metamorphosis-jackson.epub */; };
 		9D5F9B1F1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub in Resources */ = {isa = PBXBuildFile; fileRef = 9D5F9B1E1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub */; };
+		9D8114EC1EEB532300B6E9E1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9D8114EB1EEB532300B6E9E1 /* README.md */; };
 		9DA196FE1EE8A46F0019616B /* EpubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA196FD1EE8A46F0019616B /* EpubDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		9D343C011EA57A8000AB5A5D /* moby-dick.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "moby-dick.epub"; sourceTree = "<group>"; };
 		9D3493FC1E5890180076D417 /* Metamorphosis-jackson.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metamorphosis-jackson.epub"; sourceTree = "<group>"; };
 		9D5F9B1E1EA509F3006E6817 /* A-Room-with-a-View-morrison.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A-Room-with-a-View-morrison.epub"; sourceTree = "<group>"; };
+		9D8114EB1EEB532300B6E9E1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9DA196FD1EE8A46F0019616B /* EpubDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpubDetailViewController.swift; sourceTree = "<group>"; };
 		A057CD28B6D122DF9A57FAB7 /* Pods-EpubExstractor_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExstractor_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExstractor_Example/Pods-EpubExstractor_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A851A6AA70DA62FFECD19644 /* Pods_EpubExstractor_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EpubExstractor_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				9D8114EB1EEB532300B6E9E1 /* README.md */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for EpubExstractor */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D8114EC1EEB532300B6E9E1 /* README.md in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				9D1C5D4E1EE8AB6600856DF1 /* ImageCell.swift in Sources */,
 				9D1C5D511EE8AC6500856DF1 /* CellUtitlities.swift in Sources */,
