@@ -26,8 +26,6 @@ struct Epub3ContentParser: EPubContentParser {
         
         self.contentURL = URL(fileURLWithPath: epubContentsURL.appendingPathComponent(contentFilePath).path)
         self.chapters = self.parseChapters(epubContentsURL: self.contentURL)
-        
-        print(chapters)
     }
     
     func parseChapters(epubContentsURL: URL) -> [ChapterItem] {
