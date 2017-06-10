@@ -22,39 +22,46 @@ public enum EpubType {
 
 public struct Epub {
     /**
-     The URL of the folder that contains all the Epub data
+     The URL of the folder that contains all the ePub data
      */
     public let epubDirectoryURL: URL
+    
     /**
      The type of the ePub
     */
     public let type: EpubType
+    
     /**
-     URL to the Epub's cover image
+     URL to the ePub's cover image
      */
     public let coverURL: URL?
+    
     /**
-     the Epub's parsed metadata
+     The ePub's parsed metadata
      */
     public let metadata: [String:String]
+    
     /**
-     the Epub's parsed manifest
+     The ePub's parsed manifest
      */
     public let manifest: [String:ManifestItem]
+    
     /**
-     the Epub's parsed guide
+     The ePub's parsed guide
      */
     public let guide: [GuideItem]
+    
     /**
-     the Epub's parsed spine 
-     *Warning:* this array contains the list of file that you should use to setup your Epub reader
+     The ePub's parsed spine.
+     
+     **Warning:** this array contains the list of file that you should use to setup your Epub reader
      */
     public let spine: [SpineItem]
     
     let epubContentParser: EPubContentParser
     
     /**
-     Epub's title
+     The ePub's title
     */
     public var title: String? {
         get {
@@ -62,7 +69,7 @@ public struct Epub {
         }
     }
     /**
-     Epub's author
+     The ePub's author
      */
     public var author: String? {
         get {
@@ -71,7 +78,7 @@ public struct Epub {
     }
     
     /**
-     Epub's language
+     The ePub's language
      */
     public var language: String? {
         get {
@@ -80,7 +87,7 @@ public struct Epub {
     }
     
     /**
-     Epub's publisher
+     The ePub's publisher
      */
     public var publisher: String?{
         get {
@@ -89,7 +96,7 @@ public struct Epub {
     }
     
     /**
-     Epub's identifier
+     The ePub's identifier
      */
     public var identifier: String?{
         get {
@@ -98,7 +105,7 @@ public struct Epub {
     }
     
     /**
-     List of chapter and subchapters rappresenting the Epub's table of contents
+     List of chapter and subchapters rappresenting the ePub's table of contents
     */
     public var chapters: [ChapterItem] {
         return self.epubContentParser.chapters

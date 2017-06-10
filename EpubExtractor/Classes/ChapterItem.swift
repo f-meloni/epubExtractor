@@ -7,7 +7,7 @@
 //
 
 /**
- This object rappresent a chapter from the Epub's table of contents
+ This object rappresent a chapter from the ePub's table of contents
  */
 public protocol ChapterItem {
     var src: URL { get }
