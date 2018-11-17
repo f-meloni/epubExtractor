@@ -58,8 +58,6 @@ public struct Epub {
      */
     public let spine: [SpineItem]
     
-    let epubContentParser: EPubContentParser
-    
     /**
      The ePub's title
     */
@@ -110,4 +108,6 @@ public struct Epub {
     public var chapters: [ChapterItem] {
         return self.epubContentParser.chapters
     }
+    
+    let epubContentParser: EPubContentParser
 }

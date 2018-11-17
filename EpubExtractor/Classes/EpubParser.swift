@@ -15,7 +15,7 @@ enum EpubParseError: Error {
     case unknownEpubType
 }
 
-class EpubParser {
+final class EpubParser {
     func parseEpub(epubDirectoryURL: URL) throws -> Epub {
         guard let rootFileURL = self.rootFile(epubDirectoryURL: epubDirectoryURL) else {
             throw EpubParseError.rootFileNotFound

@@ -14,7 +14,7 @@ protocol ArchiveExtractorDelegate {
     func extractionDidFail(error: Error?)
 }
 
-class ArchiveExtractor {
+final class ArchiveExtractor {
     var delegate: ArchiveExtractorDelegate? = nil
     
     func extract(archiveURL: URL, destinationFolder: URL) {
