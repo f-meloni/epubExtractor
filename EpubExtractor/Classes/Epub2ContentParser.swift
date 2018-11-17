@@ -14,10 +14,11 @@ struct Epub2ContentParser: EPubContentParser {
     var chapters: [ChapterItem] = []
     
     init(manifest: [String:ManifestItem], epubContentsURL: URL) {
-        let contentFilePath = manifest["ncx"]?.href ?? ""
+        let contentFileRelativePath = manifest["ncx"]?.href ?? ""
         
-        self.contentURL = URL(fileURLWithPath: epubContentsURL.appendingPathComponent(contentFilePath).path)
-        self.chapters = self.parseChapters(epubContentsURL: self.contentURL)
+        let contentFilePath = epubContentsURL.appendingPathComponent(contentFileRelativePath, isDirectory: true).path
+        self.contentURL = URL(fileURLWithPath: contentFilePath)
+        self.chapters = self.parseChapters(epubContentsURL: epubContentsURL)
     }
     
     func parseChapters(epubContentsURL: URL) -> [ChapterItem] {
