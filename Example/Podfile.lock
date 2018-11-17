@@ -1,11 +1,11 @@
 PODS:
-  - AEXML (4.0.2)
-  - EpubExtractor (0.1.1):
-    - AEXML (~> 4.0.2)
-    - SSZipArchive (~> 1.7)
+  - AEXML (4.3.3)
+  - EpubExtractor (0.2.0):
+    - AEXML (~> 4.3)
+    - SSZipArchive (~> 2.1)
   - Nimble (5.1.1)
   - Quick (1.1.0)
-  - SSZipArchive (1.8.1)
+  - SSZipArchive (2.1.4)
 
 DEPENDENCIES:
   - EpubExtractor (from `../`)
@@ -24,11 +24,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AEXML: 7de81f28c6c876a210f31924acc2e326cd01e162
-  EpubExtractor: 85b78d3dd01381b2d87a49cb163cf43fdcb56340
+  AEXML: 601f41fcaa7bda7605cad153b0f43db9ec006c0f
+  EpubExtractor: a0468ad65ab78dc94c8b14cd867e9c26d85f254b
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
-  SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
 
 PODFILE CHECKSUM: 7a1e2f40d0bf0c9b441790f42142f0834c7e13c3
 

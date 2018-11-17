@@ -32,7 +32,7 @@ This library offers a light, efficent and easy to use interface to extract and p
 
   s.source_files = 'EpubExtractor/Classes/**/*'
   
-  s.dependency 'SSZipArchive', '~> 1.7'
-  s.dependency 'AEXML', '~> 4.0.2'
+  s.dependency 'SSZipArchive', '~> 2.1'
+  s.dependency 'AEXML', '~> 4.3'
   s.swift_version = '4.2'
 end
