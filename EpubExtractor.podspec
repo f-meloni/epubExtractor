@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EpubExtractor'
-  s.version          = '0.1.1'
+  s.version          = '0.2.0'
   s.summary          = 'iOS library to extract epubs'
 
 # This description is used to generate tags and improve search results.
@@ -34,4 +34,5 @@ This library offers a light, efficent and easy to use interface to extract and p
   
   s.dependency 'SSZipArchive', '~> 1.7'
   s.dependency 'AEXML', '~> 4.0.2'
+  s.swift_version = '4.2'
 end
