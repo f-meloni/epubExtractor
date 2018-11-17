@@ -113,7 +113,7 @@ extension EpubDetailViewController: UITableViewDelegate, UITableViewDataSource {
             return 250
         }
         
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     private func imageCell(indexPath: IndexPath) -> UITableViewCell {
