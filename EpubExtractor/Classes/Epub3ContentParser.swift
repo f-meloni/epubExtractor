@@ -14,18 +14,19 @@ struct Epub3ContentParser: EPubContentParser {
     var chapters: [ChapterItem] = []
     
     init(manifest: [String:ManifestItem], epubContentsURL: URL) {
-        var contentFilePath = ""
+        var contentFileRelativePath = ""
         
-        if manifest["toc"]?.href != nil {
-            contentFilePath = (manifest["toc"]?.href)!
-        } else if manifest["htmltoc"]?.href != nil {
-            contentFilePath = (manifest["htmltoc"]?.href)!
-        } else if manifest["nav"]?.href != nil {
-            contentFilePath = (manifest["nav"]?.href)!
+        if let toc = manifest["toc"]?.href {
+            contentFileRelativePath = toc
+        } else if let toc = manifest["htmltoc"]?.href {
+            contentFileRelativePath = toc
+        } else if let toc = manifest["nav"]?.href {
+            contentFileRelativePath = toc
         }
         
-        self.contentURL = URL(fileURLWithPath: epubContentsURL.appendingPathComponent(contentFilePath).path)
-        self.chapters = self.parseChapters(epubContentsURL: self.contentURL)
+        let contentFilePath = epubContentsURL.appendingPathComponent(contentFileRelativePath, isDirectory: true).path
+        self.contentURL = URL(fileURLWithPath: contentFilePath)
+        self.chapters = self.parseChapters(epubContentsURL: epubContentsURL)
     }
     
     func parseChapters(epubContentsURL: URL) -> [ChapterItem] {
