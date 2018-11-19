@@ -1,5 +1,5 @@
 # EpubExtractor
-![Swift 3.0](https://img.shields.io/badge/Swift-3.0-red.svg)
+![Swift 4.2](https://img.shields.io/badge/Swift-4.2-blue.svg)
 [![Version](https://img.shields.io/cocoapods/v/EpubExtractor.svg?style=flat)](http://cocoapods.org/pods/EpubExtractor)
 [![License](https://img.shields.io/cocoapods/l/EpubExtractor.svg?style=flat)](http://cocoapods.org/pods/EpubExtractor)
 [![Platform](https://img.shields.io/cocoapods/p/EpubExtractor.svg?style=flat)](http://cocoapods.org/pods/EpubExtractor)
@@ -10,7 +10,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-- Swift: 3.0+
+- Swift: 4.0+
 - XCode: 8.0+
 
 ## Installation
