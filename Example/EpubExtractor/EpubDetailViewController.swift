@@ -10,7 +10,7 @@ import UIKit
 import EpubExtractor
 
 class EpubDetailViewController: UIViewController {
-    private let epubExtractor = EPubExtractor()
+    private let epubExtractor = EpubExtractor()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,11 +35,17 @@ class EpubDetailViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.register(ImageCell.self, forCellReuseIdentifier: ImageCell.reusableIdentifier)
+        
+        let barButtonItem = UIBarButtonItem(title: "Extract text", style: .done, target: self, action: #selector(extractTextPressed))
+        navigationItem.rightBarButtonItems = [barButtonItem]
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func extractTextPressed() {
+        guard let epub = epub else { print("no epub"); return }
+    
+        let vc = storyboard?.instantiateViewController(withIdentifier: "TextExtractor") as! TextExtractorViewController
+        vc.epub = epub
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func generatePlainChapters(chapters: [ChapterItem], currentIndentationLevel: Int = 0) -> [(chapter: ChapterItem, indentationLevel: Int)] {
@@ -56,7 +62,6 @@ class EpubDetailViewController: UIViewController {
 }
 
 private let detailSection = 0
-
 private let imageIndex = 0
 private let titleIndex = 1
 private let authorIndex = 2
@@ -71,8 +76,7 @@ extension EpubDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == detailSection {
             return 5
-        }
-        else {
+        } else {
             return self.epubPlainChapters.count
         }
     }
@@ -80,8 +84,7 @@ extension EpubDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == detailSection {
             return "Details"
-        }
-        else {
+        } else {
             return "Chapters"
         }
     }
@@ -102,8 +105,7 @@ extension EpubDetailViewController: UITableViewDelegate, UITableViewDataSource {
             default:
                 return UITableViewCell()
             }
-        }
-        else {
+        } else {
             return chapterCell(indexPath: indexPath)
         }
     }

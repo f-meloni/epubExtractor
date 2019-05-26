@@ -109,5 +109,5 @@ public struct Epub {
         return self.epubContentParser.chapters
     }
     
-    let epubContentParser: EPubContentParser
+    public let epubContentParser: EpubContentParser
 }

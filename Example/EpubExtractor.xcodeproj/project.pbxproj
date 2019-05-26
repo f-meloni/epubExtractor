@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05041FC2229AA871002FE35A /* TextExtractorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05041FC1229AA871002FE35A /* TextExtractorViewController.swift */; };
 		29EB3F84A81A3AE1A6506B8B /* Pods_EpubExtractor_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB12345C42619BCE094D227C /* Pods_EpubExtractor_Tests.framework */; };
 		32296449417B00D7A5679B28 /* Pods_EpubExtractor_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501DEE453EEAF51A6869A004 /* Pods_EpubExtractor_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05041FC1229AA871002FE35A /* TextExtractorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtractorViewController.swift; sourceTree = "<group>"; };
 		0D8CF5B487593A21678D8528 /* Pods-EpubExstractor_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExstractor_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExstractor_Tests/Pods-EpubExstractor_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		176000F36348F0BA6A05D822 /* Pods-EpubExstractor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExstractor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExstractor_Tests/Pods-EpubExstractor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2CC8345F1117EE2603532496 /* Pods-EpubExtractor_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EpubExtractor_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EpubExtractor_Tests/Pods-EpubExtractor_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				9DA196FD1EE8A46F0019616B /* EpubDetailViewController.swift */,
+				05041FC1229AA871002FE35A /* TextExtractorViewController.swift */,
 				9D1C5D501EE8AC6500856DF1 /* CellUtitlities.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -284,6 +287,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = XQAD9EPEQ7;
 						LastSwiftMigration = 1010;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -298,6 +302,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -366,7 +371,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EpubExtractor_Tests/Pods-EpubExtractor_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EpubExtractor_Tests/Pods-EpubExtractor_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
@@ -377,7 +382,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EpubExtractor_Tests/Pods-EpubExtractor_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EpubExtractor_Tests/Pods-EpubExtractor_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		99373A2829D4043294A20F2C /* [CP] Check Pods Manifest.lock */ = {
@@ -404,7 +409,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-EpubExtractor_Example/Pods-EpubExtractor_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-EpubExtractor_Example/Pods-EpubExtractor_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
 				"${BUILT_PRODUCTS_DIR}/EpubExtractor/EpubExtractor.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
@@ -417,7 +422,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EpubExtractor_Example/Pods-EpubExtractor_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EpubExtractor_Example/Pods-EpubExtractor_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -431,6 +436,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				9D1C5D4E1EE8AB6600856DF1 /* ImageCell.swift in Sources */,
 				9D1C5D511EE8AC6500856DF1 /* CellUtitlities.swift in Sources */,
+				05041FC2229AA871002FE35A /* TextExtractorViewController.swift in Sources */,
 				9DA196FE1EE8A46F0019616B /* EpubDetailViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -566,6 +572,7 @@
 			baseConfigurationReference = A504CF4A44F792AF79B4295B /* Pods-EpubExtractor_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XQAD9EPEQ7;
 				INFOPLIST_FILE = EpubExtractor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -581,6 +588,7 @@
 			baseConfigurationReference = 6EF3A2FF63923E1EDCD78FC8 /* Pods-EpubExtractor_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XQAD9EPEQ7;
 				INFOPLIST_FILE = EpubExtractor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

@@ -11,16 +11,22 @@ import Foundation
 import EpubExtractor
 
 class ViewController: UIViewController {
-    let epubs = [("epub 2", ["Metamorphosis-jackson", "A-Room-with-a-View-morrison", "Beyond-Good-and-Evil-Galbraithcolor"]), ("epub3", ["moby-dick", "accessible_epub_3", "cole-voyage-of-life", "spanish-tales-epub3", "igp-epub-unleashed-01-2012", "kje-bible-books"])]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    let epubs = [
+        ("epub 2", [
+            "Metamorphosis-jackson",
+            "A-Room-with-a-View-morrison",
+            "Beyond-Good-and-Evil-Galbraithcolor"
+            ]
+        ), ("epub3", [
+            "moby-dick",
+            "accessible_epub_3",
+            "cole-voyage-of-life",
+            "spanish-tales-epub3",
+            "igp-epub-unleashed-01-2012",
+            "kje-bible-books"
+            ]
+        )
+    ]
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -28,12 +34,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return self.epubs.count
     }
     
-    @available(iOS 2.0, *)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.epubs[section].1.count
     }
     
-    @available(iOS 2.0, *)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "identifier")
         
@@ -53,7 +57,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! EpubDetailViewController
         detailVC.epubName = self.epubs[indexPath.section].1[indexPath.item]
-        
         self.navigationController?.show(detailVC, sender: self)
     }
 }
