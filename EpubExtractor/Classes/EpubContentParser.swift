@@ -33,7 +33,7 @@ extension EpubContentParser {
             )
             return mutable
         }
-        throw NSError(domain: "epub.extractor", code: 1, userInfo: ["localizedError": "Could not load file"])
+        throw NSError(domain: "epub.extractor", code: 1, userInfo: ["localizedDescription": "Could not load file"])
     }
     
     func content(forSpine: SpineItem) throws -> String {

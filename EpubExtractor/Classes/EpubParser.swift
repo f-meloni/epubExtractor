@@ -68,9 +68,9 @@ final class EpubParser {
         
         if let rootFileURLString = xmlDoc.root["rootfiles"].children.first?.attributes["full-path"] {
             return URL(fileURLWithPath: epubDirectoryURL.appendingPathComponent(rootFileURLString).path)
+        } else {
+            return nil
         }
-        
-        return nil
     }
     
     private func epubType(rootDocument: AEXMLDocument) -> EpubType {

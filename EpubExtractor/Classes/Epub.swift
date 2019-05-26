@@ -109,5 +109,8 @@ public struct Epub {
         return self.epubContentParser.chapters
     }
     
+    /**
+     Get all the content of ePub's file
+    */
     public let epubContentParser: EpubContentParser
 }
