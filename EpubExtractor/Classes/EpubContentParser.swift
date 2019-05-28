@@ -8,10 +8,9 @@
 
 import UIKit
 
-public protocol EpubContentParser {
+protocol EpubContentParser {
     var contentURL: URL { get }
     var parentURL: URL { get }
-    var spines: [SpineItem] { get }
     var chapters: [ChapterItem] { get }
     var manifest: [String: ManifestItem] { get }
     

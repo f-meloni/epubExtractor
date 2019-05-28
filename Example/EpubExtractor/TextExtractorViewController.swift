@@ -26,18 +26,10 @@ class TextExtractorViewController: UIViewController {
     }
     
     func extractText() -> String {
-        let spines = epub.epubContentParser.spines
-        
-        var res = ""
-        
-        for spine in spines {
-            do {
-                res += try epub.epubContentParser.content(forSpine: spine)
-            } catch {
-                print(error)
-            }
+        do {
+            return try epub.allContent()
+        } catch {
+            return "there was an error: \(error)"
         }
-        
-        return res
     }
 }

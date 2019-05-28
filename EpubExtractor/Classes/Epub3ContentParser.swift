@@ -12,11 +12,10 @@ import AEXML
 struct Epub3ContentParser: EpubContentParser {
     let contentURL: URL
     let manifest: [String: ManifestItem]
-    let spines: [SpineItem]
     let parentURL: URL
     var chapters: [ChapterItem] = []
     
-    init(manifest: [String: ManifestItem], spines: [SpineItem], parentURL: URL, epubContentsURL: URL) {
+    init(manifest: [String: ManifestItem], parentURL: URL, epubContentsURL: URL) {
         var contentFileRelativePath = ""
         
         if let toc = manifest["toc"]?.href {
@@ -30,7 +29,6 @@ struct Epub3ContentParser: EpubContentParser {
         let contentFilePath = epubContentsURL.appendingPathComponent(contentFileRelativePath, isDirectory: true).path
         self.contentURL = URL(fileURLWithPath: contentFilePath)
         self.manifest = manifest
-        self.spines = spines
         self.parentURL = parentURL
         self.chapters = self.parseChapters(epubContentsURL: epubContentsURL)
     }

@@ -41,9 +41,9 @@ final class EpubParser {
         
         let epubContentParser: EpubContentParser
         if epubType == .epub2 {
-            epubContentParser = Epub2ContentParser(manifest: manifest, spines: spines, parentURL: contentsURL, epubContentsURL: contentsURL)
+            epubContentParser = Epub2ContentParser(manifest: manifest, parentURL: contentsURL, epubContentsURL: contentsURL)
         } else {
-            epubContentParser = Epub3ContentParser(manifest: manifest, spines: spines, parentURL: contentsURL, epubContentsURL: contentsURL)
+            epubContentParser = Epub3ContentParser(manifest: manifest, parentURL: contentsURL, epubContentsURL: contentsURL)
         }
         
         return Epub(
@@ -53,7 +53,7 @@ final class EpubParser {
             metadata: metadata,
             manifest: manifest,
             guide: guide,
-            spine: spines,
+            spines: spines,
             epubContentParser: epubContentParser
         )
     }
