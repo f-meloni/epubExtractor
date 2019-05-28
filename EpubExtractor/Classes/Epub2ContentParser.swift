@@ -15,12 +15,12 @@ struct Epub2ContentParser: EpubContentParser {
     let parentURL: URL
     var chapters: [ChapterItem] = []
     
-    init(manifest: [String: ManifestItem], parentURL: URL, epubContentsURL: URL) {
+    init(manifest: [String: ManifestItem], epubContentsURL: URL) {
         let contentFileRelativePath = manifest["ncx"]?.href ?? ""
         
         let contentFilePath = epubContentsURL.appendingPathComponent(contentFileRelativePath, isDirectory: true).path
         self.manifest = manifest
-        self.parentURL = parentURL
+        self.parentURL = epubContentsURL
         self.contentURL = URL(fileURLWithPath: contentFilePath)
         self.chapters = self.parseChapters(epubContentsURL: epubContentsURL)
     }

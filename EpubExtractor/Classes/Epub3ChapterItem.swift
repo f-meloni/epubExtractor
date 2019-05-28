@@ -18,7 +18,7 @@ struct Epub3ChapterItem: ChapterItem {
         let aElement = xmlElement["a"]
         
         guard let srcString = aElement.attributes["href"] else {
-                return nil
+            return nil
         }
         
         self.src = epubContentsURL.appendingPathComponent(srcString)

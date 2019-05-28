@@ -15,7 +15,7 @@ struct Epub3ContentParser: EpubContentParser {
     let parentURL: URL
     var chapters: [ChapterItem] = []
     
-    init(manifest: [String: ManifestItem], parentURL: URL, epubContentsURL: URL) {
+    init(manifest: [String: ManifestItem], epubContentsURL: URL) {
         var contentFileRelativePath = ""
         
         if let toc = manifest["toc"]?.href {
@@ -29,7 +29,7 @@ struct Epub3ContentParser: EpubContentParser {
         let contentFilePath = epubContentsURL.appendingPathComponent(contentFileRelativePath, isDirectory: true).path
         self.contentURL = URL(fileURLWithPath: contentFilePath)
         self.manifest = manifest
-        self.parentURL = parentURL
+        self.parentURL = epubContentsURL
         self.chapters = self.parseChapters(epubContentsURL: epubContentsURL)
     }
     
