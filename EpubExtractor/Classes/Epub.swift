@@ -28,7 +28,7 @@ public struct Epub {
     
     /**
      The type of the ePub
-    */
+     */
     public let type: EpubType
     
     /**
@@ -39,7 +39,7 @@ public struct Epub {
     /**
      The ePub's parsed metadata
      */
-    public let metadata: [String:String]
+    public let metadata: [String: String]
     
     /**
      The ePub's parsed manifest
@@ -56,11 +56,11 @@ public struct Epub {
      
      **Warning:** this array contains the list of file that you should use to setup your Epub reader
      */
-    public let spine: [SpineItem]
+    public let spines: [SpineItem]
     
     /**
      The ePub's title
-    */
+     */
     public var title: String? {
         get {
             return self.metadata[titleKey]
@@ -104,10 +104,33 @@ public struct Epub {
     
     /**
      List of chapter and subchapters rappresenting the ePub's table of contents
-    */
+     */
     public var chapters: [ChapterItem] {
         return self.epubContentParser.chapters
     }
     
-    let epubContentParser: EPubContentParser
+    /**
+     Content of spine
+     */
+    public func content(forSpine: SpineItem) throws -> String {
+        return try self.epubContentParser.content(forSpine: forSpine)
+    }
+    
+    /**
+     Content of spine
+     */
+    public func content(forSpine: SpineItem) throws -> NSAttributedString {
+        return try self.epubContentParser.content(forSpine: forSpine)
+    }
+    
+    /**
+     All the content of ePub file
+     */
+    public func allContent() throws -> String {
+        return try spines.map({ (spine) -> String in
+            return try epubContentParser.content(forSpine: spine)
+        }).joined()
+    }
+    
+    let epubContentParser: EpubContentParser
 }

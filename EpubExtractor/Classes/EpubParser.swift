@@ -35,20 +35,27 @@ final class EpubParser {
         let contentsURL = rootFileURL.deletingLastPathComponent()
         let metadata = self.epubMetaData(rootDocument: rootDocument)
         let manifest = self.manifest(rootDocument: rootDocument)
-        let coverURL = self.ePubCoverURL(rootDocument: rootDocument, manifest: manifest, contentDirectoryURL: contentsURL)
+        let coverURL = self.epubCoverURL(rootDocument: rootDocument, manifest: manifest, contentDirectoryURL: contentsURL)
         let guide = self.guide(rootDocument: rootDocument)
-        let spine = self.spine(rootDocument: rootDocument, manifest: manifest)
+        let spines = self.spine(rootDocument: rootDocument, manifest: manifest)
         
-        let epubContentParser: EPubContentParser = (epubType == .epub2) ? Epub2ContentParser(manifest: manifest, epubContentsURL: contentsURL) : Epub3ContentParser(manifest: manifest, epubContentsURL: contentsURL)
+        let epubContentParser: EpubContentParser
+        if epubType == .epub2 {
+            epubContentParser = Epub2ContentParser(manifest: manifest, epubContentsURL: contentsURL)
+        } else {
+            epubContentParser = Epub3ContentParser(manifest: manifest, epubContentsURL: contentsURL)
+        }
         
-        return Epub(epubDirectoryURL: epubDirectoryURL,
-                    type: epubType,
-                    coverURL: coverURL,
-                    metadata: metadata,
-                    manifest: manifest,
-                    guide: guide,
-                    spine: spine,
-                    epubContentParser: epubContentParser)
+        return Epub(
+            epubDirectoryURL: epubDirectoryURL,
+            type: epubType,
+            coverURL: coverURL,
+            metadata: metadata,
+            manifest: manifest,
+            guide: guide,
+            spines: spines,
+            epubContentParser: epubContentParser
+        )
     }
     
     private func rootFile(epubDirectoryURL: URL) -> URL? {
@@ -61,8 +68,7 @@ final class EpubParser {
         
         if let rootFileURLString = xmlDoc.root["rootfiles"].children.first?.attributes["full-path"] {
             return URL(fileURLWithPath: epubDirectoryURL.appendingPathComponent(rootFileURLString).path)
-        }
-        else {
+        } else {
             return nil
         }
     }
@@ -75,10 +81,8 @@ final class EpubParser {
         switch Float(versionString) {
         case let versionCode where versionCode != nil && versionCode! >= 2.0 && versionCode! < 3.0:
             return .epub2
-            
         case let versionCode where versionCode != nil && versionCode! >= 3.0 && versionCode! < 4.0:
             return .epub3
-            
         default:
             return .unknown
         }
@@ -95,7 +99,7 @@ final class EpubParser {
         }
     }
     
-    private func ePubCoverURL(rootDocument: AEXMLDocument, manifest: [String:ManifestItem], contentDirectoryURL: URL) -> URL? {
+    private func epubCoverURL(rootDocument: AEXMLDocument, manifest: [String:ManifestItem], contentDirectoryURL: URL) -> URL? {
         if let coverHref = manifest["cover-image"]?.href {
             return URL(fileURLWithPath: contentDirectoryURL.appendingPathComponent(coverHref).path)
         }
@@ -127,9 +131,7 @@ final class EpubParser {
                 
                 return dictionary
             }
-            else {
-                return dictionary
-            }
+            return dictionary
         })
     }
     

@@ -8,16 +8,16 @@
 
 import Foundation
 
-public protocol EpubExtractorDelegate {
+public protocol EpubExtractorDelegate: class {
     func epubExactorDidExtractEpub(_ epub: Epub)
     func epubExtractorDidFail(error: Error?)
 }
 
-public class EPubExtractor {
+public class EpubExtractor {
     private let archiveExtractor: ArchiveExtractor = ArchiveExtractor()
     fileprivate let epubParser: EpubParser = EpubParser()
     
-    public var delegate: EpubExtractorDelegate?
+    public weak var delegate: EpubExtractorDelegate?
     
     public init() {
         self.archiveExtractor.delegate = self
@@ -28,14 +28,13 @@ public class EPubExtractor {
     }
 }
 
-extension EPubExtractor: ArchiveExtractorDelegate {
+extension EpubExtractor: ArchiveExtractorDelegate {
     func extractionDidSuccess(epubURL: URL, destinationFolder: URL) {
         do {
             let epub = try self.epubParser.parseEpub(epubDirectoryURL: destinationFolder)
             
             self.delegate?.epubExactorDidExtractEpub(epub)
-        }
-        catch let error {
+        } catch {
             self.delegate?.epubExtractorDidFail(error: error)
         }
     }
